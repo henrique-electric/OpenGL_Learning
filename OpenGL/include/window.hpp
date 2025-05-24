@@ -43,7 +43,7 @@ private:
 	SDL_WindowInfo windowInfo;
 
 	// OpenGL stuff
-	std::vector<GLuint>
+	std::vector<GLuint> vertexBuffers;
 
 	// Private Window class methods
 	void refreshWindow();
