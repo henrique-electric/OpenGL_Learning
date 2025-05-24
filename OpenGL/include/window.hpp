@@ -1,9 +1,15 @@
 #pragma once
+// STD includes
+#include <iostream>
+#include <vector>
+
+// SDL, OpenGL and external includes
 #include <SDL3/SDL.h>
 #include <glad/glad.h>
-#include <iostream>
+#include <glm.hpp>	  
 
-#include <erros.hpp>   // include the error enumaration 
+// Header files
+#include <erros.hpp>   // Include the error enumaration 
 #include <types.hpp>   // Contains custom data type structs
 
 enum {
@@ -35,6 +41,9 @@ private:
 	
 	// SDL stuff
 	SDL_WindowInfo windowInfo;
+
+	// OpenGL stuff
+	std::vector<GLuint>
 
 	// Private Window class methods
 	void refreshWindow();
