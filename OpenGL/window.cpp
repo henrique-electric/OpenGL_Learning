@@ -6,7 +6,7 @@ static int initOpenGL(void) {
 	SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_CORE);
 	SDL_GL_SetAttribute(SDL_GL_DOUBLEBUFFER, 1);
 
-	if (!gladLoadGLLoader((GLADloadproc)SDL_GL_GetCurrentContext)) {
+	if (!gladLoadGLLoader((GLADloadproc)SDL_GL_GetProcAddress)) {
 		return ERROR_INIT_GL_FUNCTIONS;
 	}
 
@@ -77,8 +77,13 @@ Window::Window(std::string windowTitle, int width, int height) {
 
 	// Init SDL stuff
 	if (this->initSDLWindow() != 0) return;
-	//if (initOpenGL() != 0) return;
-	// 
+
+	// Load OpenGL functions using glad
+	if (initOpenGL() != 0) {
+		this->initStatus = ERROR_INIT_GL_FUNCTIONS;
+		return;
+	}
+	 
 	this->shouldCloseWindow = false;
 }
 
