@@ -1,4 +1,4 @@
-#include "window.hpp"
+#include <window.hpp>
 
 #define KEY_PRESS_EVENT		0
 #define KEY_RELEASE_EVENT	1

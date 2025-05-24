@@ -13,39 +13,36 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Source Files\src">
-      <UniqueIdentifier>{d13912da-263f-4b2f-bc28-5f7dbd16a6eb}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\include">
-      <UniqueIdentifier>{60b85b7e-f850-43eb-a79d-a2518491d52f}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\..\..\..\SDKs\glad\src\glad.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="windowEvents.cpp">
-      <Filter>Source Files\src</Filter>
+    <ClCompile Include="src\main.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="main.cpp">
-      <Filter>Source Files\src</Filter>
+    <ClCompile Include="src\OpenGL.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="OpenGL.cpp">
-      <Filter>Source Files\src</Filter>
+    <ClCompile Include="src\window.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="window.cpp">
-      <Filter>Source Files\src</Filter>
+    <ClCompile Include="src\windowEvents.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="types.hpp">
-      <Filter>Header Files\include</Filter>
+    <ClCompile Include="src\windowInputHandler.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="window.hpp">
-      <Filter>Header Files\include</Filter>
+    <ClInclude Include="include\erros.hpp">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="erros.hpp">
-      <Filter>Header Files\include</Filter>
+    <ClInclude Include="include\types.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\window.hpp">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

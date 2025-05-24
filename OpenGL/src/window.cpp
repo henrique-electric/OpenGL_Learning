@@ -1,4 +1,4 @@
-#include "window.hpp"
+#include <window.hpp>
 
 static int initOpenGL(void) {
 	SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 3);

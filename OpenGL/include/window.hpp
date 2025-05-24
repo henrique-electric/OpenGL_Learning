@@ -3,8 +3,8 @@
 #include <glad/glad.h>
 #include <iostream>
 
-#include "erros.hpp"   // include the error enumaration 
-#include "types.hpp"   // Contains custom data type structs
+#include <erros.hpp>   // include the error enumaration 
+#include <types.hpp>   // Contains custom data type structs
 
 enum {
 	KEY_PRESS_EVENT,

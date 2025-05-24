@@ -2,7 +2,7 @@
 	This file will contain the definitions of all the OpenGL stuff functions 
 */
 
-#include "window.hpp"
+#include <window.hpp>
 
 void Window::resizeGLViewport() {
 	SDL_GetWindowSize(this->windowInfo.mainWindowPtr, &this->windowWidth, &this->windowHeight);
