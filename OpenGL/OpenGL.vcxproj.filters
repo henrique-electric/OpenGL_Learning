@@ -30,6 +30,9 @@
     <ClCompile Include="types.hpp">
       <Filter>Header Files</Filter>
     </ClCompile>
+    <ClCompile Include="OpenGL.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="window.hpp">

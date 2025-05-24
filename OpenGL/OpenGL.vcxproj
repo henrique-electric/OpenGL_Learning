@@ -130,6 +130,7 @@
   <ItemGroup>
     <ClCompile Include="..\..\..\..\..\..\SDKs\glad\src\glad.c" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="OpenGL.cpp" />
     <ClCompile Include="types.hpp" />
     <ClCompile Include="window.cpp" />
     <ClCompile Include="windowEvents.cpp" />
