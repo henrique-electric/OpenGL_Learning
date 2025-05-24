@@ -105,15 +105,6 @@ void Window::eventHandler() {
 	}
 }
 
-void Window::windowResizeHandler() {
-	SDL_GetWindowSize(this->windowInfo.mainWindowPtr, &this->windowWidth, &this->windowHeight);
-	
-	// Enable this function when finish to fix the glad loading error
-	//glViewport(0, 0, this->windowWidth, this->windowHeight);
-	SDL_SetRenderDrawColor(this->windowInfo.mainWindowRenderer, 0, 0, 0, 0);
-	SDL_RenderClear(this->windowInfo.mainWindowRenderer);
-}
-
 SDL_Event* Window::getEventRef() {
 	return &this->windowInfo.mainWindowEvent;
 }

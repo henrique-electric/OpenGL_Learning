@@ -24,6 +24,8 @@ public:
 	// Methods involving SDL stuff
 	SDL_Event* getEventRef();
 
+	// OpenGL abstraction functions
+
 private:
 	// Window class main attributes
 	int initStatus;
@@ -37,9 +39,11 @@ private:
 	// Private Window class methods
 	void refreshWindow();
 	int	 initSDLWindow();
-	void windowResizeHandler();
 
 	// Window SDL event handlers
-	
 	void handleInput(int mode);
+
+	// Private methods used to handle OpenGl
+	void resizeGLViewport();
+
 };
