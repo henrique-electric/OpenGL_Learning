@@ -3,40 +3,43 @@
 #include <glad/glad.h>
 #include <iostream>
 
-#include "erros.hpp"
+#include "erros.hpp"   // include the error enumaration 
+#include "types.hpp"   // Contains custom data type structs
 
-typedef struct SDL_WindowInfo {
-	SDL_Window*		mainWindowPtr;
-	SDL_Renderer*	mainWindowRenderer;
-	SDL_Event		mainWindowEvent;
-	SDL_GLContext	mainWindowGLContext;
-} SDL_WindowInfo;
+enum {
+	KEY_PRESS_EVENT,
+	KEY_RELEASE_EVENT,
+};
 
-typedef struct GL_InfoStruct {
-	int viewPortWidth;
-	int viewPortHeight;
-} GL_InfoStruct;
-
-class Window
-{
+class Window {
 public:
+	// Window class methods
 	Window(std::string windowTitle, int width, int height);
 	void eventHandler(void);
 	void destroy();
 	void update();
 	bool shouldClose();
+	int  getInitStatus();
 
+	// Methods involving SDL stuff
 	SDL_Event* getEventRef();
 
-	int initStatus;
 private:
+	// Window class main attributes
+	int initStatus;
 	std::string windowName;
-	SDL_WindowInfo windowInfo;
 	int windowHeight, windowWidth;
 	bool shouldCloseWindow;
+	
+	// SDL stuff
+	SDL_WindowInfo windowInfo;
 
-	// Methods
+	// Private Window class methods
 	void refreshWindow();
 	int	 initSDLWindow();
 	void windowResizeHandler();
+
+	// Window SDL event handlers
+	
+	void handleInput(int mode);
 };
