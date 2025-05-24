@@ -361,3 +361,7 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/OpenGL/vcpkg_installed
+/OpenGL/SDL3.dll
+/OpenGL/vcpkg-configuration.json
+*.json
