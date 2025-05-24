@@ -13,6 +13,10 @@ static int initOpenGL(void) {
 	return 0;
 }
 
+
+/*
+	Function to clean up SDL stuff and destroys OpenGL context
+*/
 void Window::destroy() {
 	SDL_GL_DestroyContext(this->windowInfo.mainWindowGLContext);
 	SDL_DestroyRenderer(this->windowInfo.mainWindowRenderer);
@@ -21,6 +25,9 @@ void Window::destroy() {
 	this->shouldCloseWindow = true;
 }
 
+/*
+	Function to refresh the window each frame
+*/
 void Window::update() {
 	SDL_SetRenderDrawColor(this->windowInfo.mainWindowRenderer, 0, 0, 0, 1);
 	SDL_RenderClear(this->windowInfo.mainWindowRenderer);
