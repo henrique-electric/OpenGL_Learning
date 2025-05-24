@@ -43,7 +43,9 @@ private:
 	// Window SDL event handlers
 	void handleInput(int mode);
 
-	// Private methods used to handle OpenGl
-	void resizeGLViewport();
+	/*
+		 Private methods used to handle OpenGl
+	*/
+	void resizeGLViewport(); // Used to resize the OpenGl viewport, mainly called when the main window gets resized
 
 };
