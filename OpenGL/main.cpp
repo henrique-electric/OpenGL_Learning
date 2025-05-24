@@ -4,15 +4,13 @@ int main(void) {
 	
 	Window win = Window("App", 1280, 720);
 
-	if (win.initStatus != 0) {
+	if (win.getInitStatus() != 0) {
 		win.destroy();
-		return win.initStatus;
+		return win.getInitStatus();
 	}
 
 	while (!win.shouldClose()) {
-		while (SDL_PollEvent(win.getEventRef())) {
-			win.eventHandler();
-		}
+		win.eventHandler();
 
 		win.update();
 	}
