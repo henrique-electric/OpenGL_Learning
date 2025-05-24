@@ -365,4 +365,3 @@ FodyWeavers.xsd
 /OpenGL/SDL3.dll
 /OpenGL/vcpkg-configuration.json
 *.json
-/OpenGL/packages.config
