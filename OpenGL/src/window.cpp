@@ -94,28 +94,6 @@ Window::Window(std::string windowTitle, int width, int height) {
 	this->shouldCloseWindow = false;
 }
 
-
-/*
-	This method contains the wrapping for the window events handler, we'll filter the events and call functions for specific types
-*/
-void Window::eventHandler() {
-	while (SDL_PollEvent(&this->windowInfo.mainWindowEvent)) {
-		switch (this->windowInfo.mainWindowEvent.type) {
-		case SDL_EVENT_WINDOW_CLOSE_REQUESTED:
-			this->destroy();
-			break;
-
-		case SDL_EVENT_KEY_DOWN:
-			this->handleInput(KEY_PRESS_EVENT);
-			break;
-
-		case SDL_EVENT_WINDOW_RESIZED:
-			this->resizeGLViewport();
-			break;
-		}
-	}
-}
-
 SDL_Event* Window::getEventRef() {
 	return &this->windowInfo.mainWindowEvent;
 }
