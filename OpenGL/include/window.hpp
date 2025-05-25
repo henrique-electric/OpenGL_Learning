@@ -2,6 +2,7 @@
 // STD includes
 #include <iostream>
 #include <vector>
+#include <fstream>
 
 // SDL, OpenGL and external includes
 #include <SDL3/SDL.h>
@@ -11,13 +12,14 @@
 // Header files
 #include <erros.hpp>   // Include the error enumaration 
 #include <types.hpp>   // Contains custom data type structs
+#include <OpenGL.hpp>
 
 enum {
 	KEY_PRESS_EVENT,
 	KEY_RELEASE_EVENT,
 };
 
-class Window {
+class Window : public GL_Backend{
 public:
 	// Window class methods
 	Window(std::string windowTitle, int width, int height);
