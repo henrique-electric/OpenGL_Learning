@@ -136,12 +136,13 @@
     <ClCompile Include="src\windowInputHandler.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\erros.hpp" />
-    <ClInclude Include="include\types.hpp" />
-    <ClInclude Include="include\window.hpp" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <ClInclude Include="include\erros.hpp" />
+    <ClInclude Include="include\OpenGL.hpp" />
+    <ClInclude Include="include\types.hpp" />
+    <ClInclude Include="include\window.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
