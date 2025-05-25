@@ -363,6 +363,6 @@ MigrationBackup/
 FodyWeavers.xsd
 /OpenGL/vcpkg_installed
 /OpenGL/SDL3.dll
-/OpenGL/vcpkg-configuration.json
-*.json
+vcpkg-configuration.json
 /OpenGL/packages.config
+/vcpkg_installed
