@@ -108,6 +108,10 @@ void Window::eventHandler() {
 		case SDL_EVENT_KEY_DOWN:
 			this->handleInput(KEY_PRESS_EVENT);
 			break;
+
+		case SDL_EVENT_WINDOW_RESIZED:
+			this->resizeGLViewport();
+			break;
 		}
 	}
 }
