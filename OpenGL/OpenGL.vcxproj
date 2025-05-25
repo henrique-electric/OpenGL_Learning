@@ -103,7 +103,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\SDKs\glad\include;C:\SDKs\SDL3-3.2.14\include\;C:\Users\jhpme\source\repos\OpenGL\OpenGL\vcpkg_installed\x64-windows\include\glm;C:\Users\jhpme\source\repos\OpenGL\OpenGL\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SDKs\glad\include;C:\SDKs\SDL3-3.2.14\include\;C:\Users\jhpme\source\repos\henrique-electric\OpenGL_Learning\OpenGL\include;C:\Users\jhpme\source\repos\henrique-electric\OpenGL_Learning\vcpkg_installed\x64-windows\include\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -128,9 +128,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\..\..\SDKs\glad\src\glad.c" />
+    <ClCompile Include="..\..\..\..\..\..\..\SDKs\glad\src\glad.c" />
     <ClCompile Include="src\main.cpp" />
-    <ClCompile Include="src\OpenGL.cpp" />
+    <ClCompile Include="src\OpenGL.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\jhpme\source\repos\henrique-electric\OpenGL_Learning\OpenGL\include;C:\SDKs\SDL3-3.2.14\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
     <ClCompile Include="src\window.cpp" />
     <ClCompile Include="src\windowEvents.cpp" />
     <ClCompile Include="src\windowInputHandler.cpp" />
