@@ -2,7 +2,6 @@
 	This file will contain the definitions of all the OpenGL stuff functions 
 */
 
-#include <window.hpp>
 #include <OpenGL.hpp>
 
 void Window::resizeGLViewport() {
