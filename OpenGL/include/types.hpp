@@ -36,7 +36,7 @@ struct bufferStruct {
 	std::string name;
 	uint		id;
 	GLuint		buffType;
-
+	uint		posOnVector;
 };
 
 
