@@ -19,7 +19,7 @@ enum {
 	KEY_RELEASE_EVENT,
 };
 
-class Window : public GL_Backend{
+class Window : public GL_Backend {
 public:
 	// Window class methods
 	Window(std::string windowTitle, int width, int height);
@@ -58,5 +58,4 @@ private:
 		 Private methods used to handle OpenGl
 	*/
 	void resizeGLViewport(); // Used to resize the OpenGl viewport, mainly called when the main window gets resized
-
 };

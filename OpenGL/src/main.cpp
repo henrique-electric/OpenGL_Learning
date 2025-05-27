@@ -20,6 +20,5 @@ int main(void) {
 		win.eventHandler();
 		win.update();
 	}
-
 	return 0;
 }
