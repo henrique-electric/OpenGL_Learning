@@ -1,4 +1,4 @@
-#pragma
+#pragma once
 
 enum {
 	ERROR_INIT_OPENGL = 0x01,
