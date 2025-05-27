@@ -3,30 +3,38 @@
 */
 
 #include <OpenGL.hpp>
-
-void Window::resizeGLViewport() {
-	SDL_GetWindowSize(this->windowInfo.mainWindowPtr, &this->windowWidth, &this->windowHeight);
-	
-	// Cast the dimension to GLsizei just to make sure there won't be any problem
-	GLsizei width  = static_cast<GLsizei>(this->windowWidth);
-	GLsizei height = static_cast<GLsizei>(this->windowHeight);
-
-	glViewport(0, 0, width, height);
-}
-
 /*
 	Function used to create a a new OpenGL buffer and also
 	bind a name to it.
 */
 void GL_Backend::createBuffer(std::string name, int type) {
 	bufferStruct newBuffer;
-	newBuffer.name		= name;
-	newBuffer.buffType  = static_cast<GLuint>(type);
+	newBuffer.name		  = name;
+	newBuffer.buffType    = static_cast<GLuint>(type);
+	newBuffer.posOnVector = static_cast<uint>(this->glBuffers.size());
 
 	// Invoke OpenGL API functions
 	glGenBuffers(1, &newBuffer.id);
 
 	this->glBuffers.push_back(newBuffer); // Push to the buffer vector
+}
+
+
+/*
+	Function to delete a buffer by its name. It runs through the vector of buffers
+	and deletes it
+*/
+int GL_Backend::deleteBuffer(std::string buffName) {
+
+	for (bufferStruct& buffer : this->glBuffers) {
+		if (buffer.name == buffName) {
+			glDeleteBuffers(1, &buffer.id); //delete the buffer from OpenGL
+			this->glBuffers.erase(this->glBuffers.begin() + buffer.posOnVector - 1);  // remove the buffer from the vector
+			return 0;
+		}
+	}
+
+	return ERROR_BUFFER_NOT_FOUND;
 }
 
 /*
